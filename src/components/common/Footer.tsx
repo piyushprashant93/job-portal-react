@@ -57,10 +57,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 text-sm text-center lg:text-left">
           {[...sections, ...sections].map((section, index) => (
             <div key={index}>
-              <h3 className="font-semibold mb-2">{section.title}</h3>
+              <h3 className="font-semibold mb-2 text-left md:text-center">{section.title}</h3>
               <ul className="space-y-1">
                 {section.links.map((link, idx) => (
-                  <li key={idx}>
+                  <li className="text-left md:text-center" key={idx}>
                     <Link to={link.url} className="hover:underline">
                       {link.title}
                     </Link>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Disclaimer Section */}
-      <div className="px-4 md:px-[10%] flex flex-col lg:flex-row gap-8 items-center justify-between">
+      <div className="px-4 md:px-[10%] flex flex-col lg:flex-row md:gap-8 items-center justify-between">
         {/* Logos */}
         <div className="flex flex-col items-center lg:items-center py-8 gap-2">
           <img
@@ -107,12 +107,12 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="px-4 md:px-[10%] mb-10 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="px-4 md:px-[10%] mb-10 pb-4 flex flex-col-reverse sm:flex-row justify-between items-center gap-4">
         <p className="text-gray-500 text-xs text-center sm:text-left">
           © Copyright 2025 JITO™. All Rights Reserved.
         </p>
 
-        <div className="text-gray-500 text-xs flex flex-wrap justify-center gap-4">
+        <div className="text-gray-500 text-xs flex mt-4 md:mt-0 flex-wrap justify-center gap-4">
           <Link to="/" className="hover:underline">
             Privacy Policy
           </Link>

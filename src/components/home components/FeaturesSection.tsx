@@ -42,15 +42,15 @@ const FeaturesSection: React.FC = () => {
                 ))}
             </div>
 
-            <div className="flex items-start justify-between">
+            <div className="flex flex-col md:flex-row items-center md:items-start justify-between">
                 <div>
                     <h2 className="text-3xl sm:text-4xl font-bold mb-2">We only deliver results.</h2>
-                    <p className="text-gray-400 mb-10">
+                    <p className="text-gray-400 mb-5 md:mb-10">
                         We don’t use excuse or something. Okay maybe sometimes.
                     </p>
                 </div>
 
-                <div className="flex justify-center gap-4 flex-wrap">
+                <div className="flex justify-center gap-4 mb-5 md:mb-0 flex-wrap">
                     <button className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium flex items-center gap-2 hover:bg-blue-700 transition">
                         <FaPlay className="w-3 h-3" />
                         Demo
@@ -63,7 +63,7 @@ const FeaturesSection: React.FC = () => {
 
             <div className="text-center mx-auto">
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-left mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-left mb-10">
                     {stats.map((stat, index) => (
                         <div key={index}>
                             <div className="text-blue-500 text-2xl font-bold">{stat.value}</div>
